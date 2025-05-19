@@ -1,4 +1,4 @@
-document.getElementById('projectForm').addEventListener('submit', function(event) {
+document.getElementById('projectForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const projectName = document.getElementById('projectName').value;
@@ -16,5 +16,5 @@ document.getElementById('projectForm').addEventListener('submit', function(event
     localStorage.setItem('fileName', file.name);
 
     // Ga naar scherm 2
-    window.location.href = 'screen2.html';
+    window.location.href = '../pages/SecondPage/coordinaten.html';
 });
