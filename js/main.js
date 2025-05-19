@@ -16,5 +16,5 @@ document.getElementById('projectForm').addEventListener('submit', function (even
     localStorage.setItem('fileName', file.name);
 
     // Ga naar scherm 2
-    window.location.href = '../pages/SecondPage/coordinaten.html';
+    window.location.href = '../pages/SecondPage/step2_upload.html';
 });

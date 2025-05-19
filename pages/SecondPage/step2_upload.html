@@ -1,0 +1,43 @@
+<!-- /mockups/step2_upload.html -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bestand uploaden - Stap 2 van 2</title>
+  <link rel="stylesheet" href="step2_upload.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="close">&times;</div>
+    <h2>Stap 2 van 2</h2>
+    <h1>Bestand uploaden</h1>
+
+    <form class="upload-form">
+      <label class="upload-area">
+        <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="upload icon" />
+        <div class="upload-instruction">
+          <strong>Klik om 3D-bestand te kiezen</strong> of sleep je .obj, .fbx of .dwg bestand hierheen.<br />
+          <small>Alleen 3D-bestanden toegestaan</small>
+        </div>
+        <input type="file" id="fileInput" accept=".obj,.fbx,.dwg" />
+      </label>
+
+      <input class="filename-box" type="text" id="filename" readonly placeholder="Bestandsnaam" value="Rdam_Hofplein_Concept2025.obj" />
+
+      <div class="coords">
+        <input type="text" placeholder="coördinaat punt 1" />
+        <input type="text" placeholder="coördinaat punt 2" />
+      </div>
+
+      <div class="buttons">
+        <button type="button" class="back">Vorige</button>
+        <button type="submit" class="save">Opslaan</button>
+      </div>
+    </form>
+
+    <div class="help">Vragen?</div>
+  </div>
+
+  <script src="step2_upload.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!-- /dashboard/index.html -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Alle Teams Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user">
+        <div class="avatar">👤</div>
+        <div class="user-info">
+          <strong>Kees van Oorschot</strong><br>
+          <small>Afdeling Stadsontwikkeling</small>
+        </div>
+      </div>
+
+      <div class="nav">
+        <input type="text" class="search" placeholder="Zoeken" />
+        <div class="nav-item selected">📁 Alle teams</div>
+        <div class="nav-item">⚙️ Instellingen</div>
+        <div class="nav-footer">
+          <small>Favoriete Teams</small>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="header">
+        <div class="title">
+          <span class="icon">📁</span>
+          <h1>Alle Teams</h1>
+          <button class="dropdown-toggle">▼</button>
+        </div>
+        <div class="actions">
+          <button class="btn primary">+ Project</button>
+          <button class="btn secondary">Delen</button>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <div class="plus">+</div>
+        <a href="#" class="create-link">Maak een project aan.</a>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div id="projectModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="close-modal">&times;</div>
+      <h2>Stap 2 van 2</h2>
+      <h1>Bestand uploaden</h1>
+
+      <form class="upload-form">
+        <label class="upload-area">
+          <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="upload icon" />
+          <div class="upload-instruction">
+            <strong>Klik om 3D-bestand te kiezen</strong> of sleep je .obj, .fbx of .dwg bestand hierheen.<br />
+            <small>Alleen 3D-bestanden toegestaan</small>
+          </div>
+          <input type="file" id="fileInput" accept=".obj,.fbx,.dwg" />
+        </label>
+
+        <input class="filename-box" type="text" id="filename" readonly placeholder="Bestandsnaam" value="Rdam_Hofplein_Concept2025.obj" />
+
+        <div class="coords">
+          <input type="text" placeholder="coördinaat punt 1" />
+          <input type="text" placeholder="coördinaat punt 2" />
+        </div>
+
+        <div class="buttons">
+          <button type="button" class="back">Vorige</button>
+          <button type="submit" class="save">Opslaan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
