@@ -196,6 +196,25 @@ body {
     cursor: pointer;
     transition: background 0.2s;
   }
+
+  #uploadIcon {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  #previewImage {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+  
+  .upload-instruction {
+    color: green;
+    font-size: 14px;
+    margin-top: 15px;
+  }
   
   .upload-area:hover {
     background: #f9f9f9;

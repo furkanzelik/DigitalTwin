@@ -44,7 +44,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // 📂 Toon bestandsnaam
     fileInput.addEventListener('change', () => {
       if (fileInput.files.length > 0) {
-        filenameBox.value = fileInput.files[0].name;
+        const file = fileInput.files[0];
+        const filenameBox = document.getElementById('filename');
+        const previewImage = document.getElementById('previewImage');
+        const uploadIcon = document.getElementById('uploadIcon');
+        const uploadText = document.getElementById('uploadText');
+    
+        filenameBox.value = file.name;
+    
+        if (file.type.startsWith('image/')) {
+          const imageURL = URL.createObjectURL(file);
+          previewImage.src = imageURL;
+          previewImage.classList.remove('hidden');
+          uploadIcon.classList.add('hidden');
+          uploadText.classList.add('hidden');
+        } else {
+          previewImage.classList.add('hidden');
+          previewImage.src = '';
+          uploadIcon.classList.remove('hidden');
+          uploadText.classList.remove('hidden');
+        }
       }
     });
   });
