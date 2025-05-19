@@ -1,12 +1,15 @@
-/* /dashboard/style.css */
-
-/* General */
+/* Algemene basisinstellingen */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #fafafa;
   }
   
+  .hidden {
+    display: none !important;
+  }
+  
+  /* App container */
   .app-container {
     display: flex;
     height: 100vh;
@@ -62,7 +65,7 @@ body {
     color: #999;
   }
   
-  /* Main */
+  /* Main content */
   .main-content {
     flex: 1;
     padding: 30px;
@@ -124,6 +127,12 @@ body {
     padding: 40px;
     text-align: center;
     color: green;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .project-box:hover {
+    background: #f1f1f1;
   }
   
   .project-box .plus {
@@ -132,18 +141,10 @@ body {
     margin-bottom: 10px;
   }
   
-  .create-link {
-    color: green;
-    text-decoration: none;
-  }
-  
-  /* Modal */
+  /* Modal styles */
   .modal {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -151,33 +152,41 @@ body {
     z-index: 1000;
   }
   
-  .modal.hidden {
-    display: none;
-  }
-  
   .modal-content {
     background: white;
     padding: 30px;
+    border-radius: 8px;
     width: 700px;
     max-width: 90%;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     position: relative;
-    border-radius: 6px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   }
   
   .close-modal {
     position: absolute;
-    right: 20px;
     top: 20px;
+    right: 20px;
     font-size: 24px;
     cursor: pointer;
+    color: #333;
   }
   
-  /* Upload form */
+  /* Form inside modal */
   .upload-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+  
+  .step1-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .step1-grid label {
+    font-size: 14px;
+    margin-bottom: 4px;
   }
   
   .upload-area {
@@ -185,11 +194,11 @@ body {
     padding: 40px;
     text-align: center;
     cursor: pointer;
-    position: relative;
+    transition: background 0.2s;
   }
   
   .upload-area:hover {
-    background-color: #f8f8f8;
+    background: #f9f9f9;
   }
   
   .upload-area input[type="file"] {
@@ -198,24 +207,25 @@ body {
   
   .upload-area img {
     height: 60px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   
   .upload-instruction {
     color: green;
     line-height: 1.5;
+    font-size: 14px;
   }
   
   .filename-box {
-    width: 100%;
     padding: 10px;
     font-size: 16px;
+    width: 100%;
     box-sizing: border-box;
   }
   
   .coords {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
   
@@ -232,11 +242,19 @@ body {
     margin-top: 10px;
   }
   
-  .back {
-    background: #f1f1f1;
-  }
-  
-  .save {
+  button.save {
     background: #e6007e;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  button.back,
+  button#prevStep {
+    background: #f1f1f1;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
   }
