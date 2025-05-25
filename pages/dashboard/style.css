@@ -1,279 +1,283 @@
 /* Algemene basisinstellingen */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fafafa;
-  }
-  
-  .hidden {
-    display: none !important;
-  }
-  
-  /* App container */
-  .app-container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    width: 240px;
-    background: #f8f9fa;
-    border-right: 1px solid #ddd;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .user {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-  }
-  
-  .avatar {
-    font-size: 32px;
-  }
-  
-  .user-info small {
-    color: #666;
-  }
-  
-  .search {
-    padding: 10px;
-    width: 100%;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-  }
-  
-  .nav-item {
-    padding: 10px;
-    margin-bottom: 5px;
-    cursor: pointer;
-  }
-  
-  .nav-item.selected {
-    background: #e9ecef;
-    font-weight: bold;
-  }
-  
-  .nav-footer {
-    margin-top: auto;
-    font-size: 14px;
-    color: #999;
-  }
-  
-  /* Main content */
-  .main-content {
-    flex: 1;
-    padding: 30px;
-    box-sizing: border-box;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .title h1 {
-    margin: 0;
-    font-size: 28px;
-  }
-  
-  .dropdown-toggle {
-    border: none;
-    background: transparent;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .actions {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .btn {
-    padding: 10px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-  }
-  
-  .primary {
-    background: #e6007e;
-    color: white;
-  }
-  
-  .secondary {
-    background: white;
-    border: 1px solid #999;
-    color: black;
-  }
-  
-  /* Project box */
-  .project-box {
-    margin-top: 30px;
-    border: 1px dashed #ccc;
-    padding: 40px;
-    text-align: center;
-    color: green;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  
-  .project-box:hover {
-    background: #f1f1f1;
-  }
-  
-  .project-box .plus {
-    font-size: 40px;
-    color: #999;
-    margin-bottom: 10px;
-  }
-  
-  /* Modal styles */
-  .modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    width: 700px;
-    max-width: 90%;
-    position: relative;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  }
-  
-  .close-modal {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-  }
-  
-  /* Form inside modal */
-  .upload-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .step1-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .step1-grid label {
-    font-size: 14px;
-    margin-bottom: 4px;
-  }
-  
-  .upload-area {
-    border: 2px dashed #ccc;
-    padding: 40px;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+}
 
-  #uploadIcon {
-    height: 60px;
-    margin-bottom: 10px;
-  }
-  
-  #previewImage {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    border-radius: 6px;
-    margin: 0 auto;
-  }
-  
-  .upload-instruction {
-    color: green;
-    font-size: 14px;
-    margin-top: 15px;
-  }
-  
-  .upload-area:hover {
-    background: #f9f9f9;
-  }
-  
-  .upload-area input[type="file"] {
-    display: none;
-  }
-  
-  .upload-area img {
-    height: 60px;
-    margin-bottom: 10px;
-  }
-  
-  .upload-instruction {
-    color: green;
-    line-height: 1.5;
-    font-size: 14px;
-  }
-  
-  .filename-box {
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .coords {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  
-  .coords input {
-    padding: 12px;
-    font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  
-  button.save {
-    background: #e6007e;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-  }
-  
-  button.back,
-  button#prevStep {
-    background: #f1f1f1;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-  }
+.hidden {
+  display: none !important;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #f8f9fa;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  font-size: 32px;
+}
+
+.user-info small {
+  color: #666;
+}
+
+.search {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.nav-item {
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.nav-item.selected {
+  background: #e9ecef;
+  font-weight: bold;
+}
+
+.nav-footer {
+  margin-top: auto;
+  font-size: 14px;
+  color: #999;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.dropdown-toggle {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.primary {
+  background: #e6007e;
+  color: white;
+}
+
+.secondary {
+  background: white;
+  border: 1px solid #999;
+  color: black;
+}
+
+/* Project box */
+.project-box {
+  margin-top: 30px;
+  border: 1px dashed #ccc;
+  padding: 40px;
+  text-align: center;
+  color: green;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.project-box:hover {
+  background: #f1f1f1;
+}
+
+.project-box .plus {
+  font-size: 40px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 800px;
+  max-width: 95%;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Form */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step1-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step1-grid label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+/* Upload area */
+.upload-area {
+  position: relative;
+  border: 2px dashed #ccc;
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-area:hover {
+  background: #f9f9f9;
+}
+
+.upload-area input[type="file"] {
+  display: none;
+}
+
+#previewImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#uploadIcon,
+.upload-instruction {
+  z-index: 2;
+  position: relative;
+}
+
+#uploadIcon {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.upload-instruction {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Coords + Buttons */
+.filename-box {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.coords {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.coords input {
+  padding: 12px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button.save {
+  background: #e6007e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+button.back,
+button#prevStep {
+  background: #f1f1f1;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}

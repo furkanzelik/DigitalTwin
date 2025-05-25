@@ -46,7 +46,7 @@
     </main>
   </div>
 
-  <!-- Modal (START HIDDEN) -->
+  <!-- Modal -->
   <div id="projectModal" class="modal hidden">
     <div class="modal-content">
       <div class="close-modal">&times;</div>
@@ -73,14 +73,11 @@
 
           <label class="upload-area">
             <img id="uploadIcon" src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="upload icon" />
-            
             <img id="previewImage" class="hidden" alt="Preview" />
-          
             <div class="upload-instruction" id="uploadText">
               <strong>Klik om 3D-bestand te kiezen</strong> of sleep je .obj, .fbx of .dwg bestand hierheen.<br />
               <small>Alleen 3D-bestanden toegestaan</small>
             </div>
-          
             <input type="file" id="fileInput" accept=".obj,.fbx,.dwg,.jpg,.jpeg,.png" />
           </label>
 
@@ -97,12 +94,10 @@
         <h1>Bestand uploaden</h1>
         <form class="upload-form">
           <input class="filename-box" type="text" id="filename" readonly placeholder="Bestandsnaam" />
-
           <div class="coords">
             <input type="text" placeholder="coördinaat punt 1" />
             <input type="text" placeholder="coördinaat punt 2" />
           </div>
-
           <div class="buttons">
             <button type="button" id="prevStep">Vorige</button>
             <button type="submit" class="save">Opslaan</button>
