@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const previewImage = document.getElementById('previewImage');
   const uploadIcon = document.getElementById('uploadIcon');
   const uploadText = document.getElementById('uploadText');
+  const saveBtn = document.querySelector('.save');
+
 
   projectBox.addEventListener('click', () => {
     modal.classList.remove('hidden');
@@ -57,5 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
         uploadText.classList.remove('hidden');
       }
     }
+  });
+
+  saveBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // voorkomt formulier-submit en reload
+
+    // 👉 hier zou je ook nog form-validatie kunnen doen
+
+    // ✅ Redirect naar projectpagina
+    window.location.href = '../projectPage/projectIndex.html';
   });
 });

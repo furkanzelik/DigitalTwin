@@ -1,0 +1,98 @@
+<!-- project.html -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hofplein Project</title>
+  <link rel="stylesheet" href="projectStyle.css" />
+</head>
+<body>
+  <div class="project-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user">
+        <div class="avatar">👤</div>
+        <div class="user-info">
+          <strong>Kees van Oorschot</strong><br />
+          <small>Afdeling Stadsontwikkeling</small>
+        </div>
+      </div>
+      <div class="nav">
+        <input type="text" class="search" placeholder="Zoeken" />
+        <div class="nav-item selected">📁 Alle projecten</div>
+        <div class="nav-item">⚙️ Instellingen</div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+      <header class="project-header">
+        <div class="breadcrumb">📁 Alle teams / <strong>Hofplein Project</strong></div>
+        <div class="project-title">
+          <h1>Hofplein Project</h1>
+          <button class="btn primary">Open Project</button>
+          <button class="btn">Delen</button>
+          <button class="btn">Instellingen</button>
+        </div>
+      </header>
+
+      <section class="insights">
+        <div class="card">
+          <p>Co2 opslag per jaar</p>
+          <div class="bar">
+            <div class="fill" style="width: 18%; background: green;"></div>
+          </div>
+          <div class="labels">
+            <span>0</span><span>3640 ton</span><span>19200 ton</span>
+          </div>
+        </div>
+        <div class="card">
+          <p>Hittestress</p>
+          <div class="gauge">🌡️ <strong>35°C</strong></div>
+        </div>
+        <div class="card">
+          <p>Groen in gebied</p>
+          <div class="bar">
+            <div class="fill" style="width: 10%; background: green;"></div>
+          </div>
+          <div class="labels">
+            <span>0%</span><span>10%</span><span>100%</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="twin-section">
+        <div class="twin-image" onclick="openCesium()">
+          <img src="../../assets/3d-tile-image.png" alt="Digital Twin" />
+        </div>
+        <div class="card">
+          <p>Hittestress voor de verandering</p>
+          <div class="gauge">🌡️ <strong>35°C</strong></div>
+          <p style="font-size: 12px; color: orange;">Geen nieuwe data beschikbaar</p>
+          <textarea placeholder="Typ hier je notities"></textarea>
+        </div>
+      </section>
+    </main>
+
+    <!-- Team -->
+    <aside class="team">
+      <h4>Activiteiten</h4>
+      <p class="log">📁 Project aangemaakt<br /><small>12 mei 2025, 11:56</small></p>
+
+      <h4>Teamleden</h4>
+      <ul>
+        <li>Natalie de Vries</li>
+        <li>Daan Jansen</li>
+        <li>Anke de Lange</li>
+        <li>Koen Okkerse</li>
+        <li>Karin Moerman</li>
+        <li>Merel Maas</li>
+        <li>Kees van Oorschot</li>
+      </ul>
+      <button class="btn small">Toevoegen +</button>
+    </aside>
+  </div>
+
+  <script src="projectMain.js"></script>
+</body>
+</html>
