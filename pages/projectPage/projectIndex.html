@@ -1,4 +1,4 @@
-<!-- project.html -->
+<!-- projectIndex.html -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -91,6 +91,12 @@
       </ul>
       <button class="btn small">Toevoegen +</button>
     </aside>
+  </div>
+
+  <!-- Overlay: Cesium Viewer -->
+  <div id="cesiumOverlay" class="hidden">
+    <div class="close-btn" onclick="closeCesium()">×</div>
+    <iframe src="cesium-viewer.html" frameborder="0" id="cesiumFrame"></iframe>
   </div>
 
   <script src="projectMain.js"></script>

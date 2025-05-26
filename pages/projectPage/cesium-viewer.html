@@ -14,6 +14,53 @@
   <div id="tree-menu">
     <button id="addTreeBtn">🌳 Boom plaatsen</button>
   </div>
+
+  <!-- Toolbar -->
+<div id="toolbar">
+  <button id="btn-center">🧭</button>
+  <button id="btn-co2">☁️</button>
+  <button id="btn-heat">🌡️</button>
+  <button id="btn-space">📐</button>
+</div>
+
+<!-- CO2 Panel -->
+<div id="co2Panel" class="panel hidden">
+  <strong>CO₂ Opslag</strong>
+  <div id="co2Value">25%</div>
+  <div class="bar">
+    <div id="co2Fill" style="height: 25%"></div>
+  </div>
+</div>
+
+<!-- Hittestress Panel -->
+<div id="heatPanel" class="panel hidden">
+  <h4>maand mei</h4>
+  <div class="subtitle">
+    <div class="dot"></div>
+    <span>De hittestress is 18 °C</span>
+  </div>
+  <div class="chart">
+    <!-- Y-axis labels -->
+    <div class="y-label" style="bottom: 0px">16<br>°C</div>
+    <div class="y-label" style="bottom: 40px">24<br>°C</div>
+    <div class="y-label" style="bottom: 80px">32<br>°C</div>
+
+    <!-- Grid lines -->
+    <div class="line" style="bottom: 0;"></div>
+    <div class="line" style="bottom: 40px;"></div>
+    <div class="line" style="bottom: 80px;"></div>
+    <div class="line" style="bottom: 120px;"></div>
+    <div class="line" style="bottom: 160px;"></div>
+
+    <!-- Filled background zone -->
+    <div class="bg-zone"></div>
+
+    <!-- Highlight 18°C marker -->
+    <div class="marker-line"></div>
+  </div>
+</div>
+<!-- Opslaan knop -->
+<button id="saveAndContinue">💾 Opslaan & Ga verder</button>
   <script src="cesium-viewer.js"></script>
 </body>
 </html>

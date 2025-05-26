@@ -192,3 +192,38 @@ body {
     width: 100%;
     margin-top: 10px;
   }
+
+  /* Fullscreen Cesium Overlay */
+#cesiumOverlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cesiumOverlay.hidden {
+  display: none;
+}
+
+#cesiumOverlay iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 12px;
+  border-radius: 6px;
+}

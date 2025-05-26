@@ -1,0 +1,225 @@
+/* resultaat.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .sidebar, .team {
+    width: 240px;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar {
+    border-right: 1px solid #ccc;
+  }
+  
+  .team {
+    border-left: 1px solid #ccc;
+  }
+  
+  .user {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .avatar {
+    font-size: 32px;
+  }
+  
+  .search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-item.selected {
+    background: #e9ecef;
+    font-weight: bold;
+  }
+  
+  .fav {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px 30px;
+    overflow-y: auto;
+  }
+  
+  .header {
+    margin-bottom: 10px;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .range button {
+    margin-right: 10px;
+    padding: 6px 12px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .range button.active {
+    background: #00794f;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .range select {
+    padding: 6px;
+    margin-left: 10px;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .btn {
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid #999;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .btn.primary {
+    background: #e6007e;
+    color: white;
+    border: none;
+  }
+  
+  .btn.small {
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .legend {
+    margin-top: 10px;
+    font-size: 12px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background: #eaf4ff;
+    padding: 16px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  }
+  
+  .bar {
+    height: 20px;
+    background: #e0e0e0;
+    margin-top: 10px;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .fill {
+    height: 100%;
+    border-radius: 4px;
+  }
+  
+  .labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  
+  .gauge {
+    font-size: 26px;
+    color: #e6007e;
+    margin-top: 10px;
+  }
+  
+  .main-block {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .viewer img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 0 200px;
+  }
+  
+  .stat-green {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+  }
+  
+  .stat-red {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+  }
+  
+  .team h4 {
+    margin-top: 0;
+  }
+  
+  .team .log {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .team ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .team li {
+    margin: 5px 0;
+  }
+  

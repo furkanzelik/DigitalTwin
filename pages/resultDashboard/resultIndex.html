@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hofplein Resultaat</title>
+  <link rel="stylesheet" href="resultStyle.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user">
+        <div class="avatar">👤</div>
+        <div class="user-info">
+          <strong>Kees van Oorschot</strong><br />
+          <small>Afdeling Stadsontwikkeling</small>
+        </div>
+      </div>
+      <div class="nav">
+        <input type="text" class="search" placeholder="Zoeken" />
+        <div class="nav-item selected">⭐ Alle projecten</div>
+        <div class="nav-item">⚙️ Instellingen</div>
+        <div class="nav-footer">
+          <small>Favorieten projecten</small>
+          <div class="fav">● Hofplein Project</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <header class="header">
+        <div class="breadcrumb">⭐ Alle projecten / <strong>Hofplein Project</strong></div>
+        <div class="controls">
+          <div class="range">
+            <button>Dag</button>
+            <button>Week</button>
+            <button class="active">Maand</button>
+            <button>Jaar</button>
+            <select>
+              <option>mei, 2025</option>
+            </select>
+          </div>
+          <div class="actions">
+            <button class="btn primary">Bewerk project</button>
+            <button class="btn">Delen</button>
+            <button class="btn">Instellingen</button>
+          </div>
+        </div>
+        <div class="legend">
+          <span style="color:#0066cc;">● Informatie</span>
+          <span style="color:#cc0000;">● Gevaar</span>
+          <span style="color:#ffcc00;">● Waarschuwing</span>
+          <span style="color:#00aa00;">● Succesvol / In orde</span>
+        </div>
+      </header>
+
+      <!-- Cards -->
+      <section class="cards">
+        <div class="card">
+          <p><strong>CO₂ opslag in mei</strong><br>Er wordt 6740 ton CO₂ opgeslagen.</p>
+          <div class="bar">
+            <div class="fill" style="width: 35%; background: green;"></div>
+          </div>
+          <div class="labels">
+            <span>0</span><span>19200 ton</span>
+          </div>
+        </div>
+        <div class="card">
+          <p><strong>Hittestress</strong></p>
+          <div class="gauge">🌡️ <strong>18°C</strong></div>
+        </div>
+        <div class="card">
+          <p><strong>Percentage groen in gebied</strong><br>60% van dit gebied bestaat uit groen.</p>
+          <div class="bar">
+            <div class="fill" style="width: 60%; background: green;"></div>
+          </div>
+          <div class="labels">
+            <span>0%</span><span>100%</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Viewer & Stats -->
+      <section class="main-block">
+        <div class="viewer">
+          <img src="../../assets/3d-tile-image.png" alt="Viewer" />
+        </div>
+        <div class="stats">
+          <div class="card">
+            <p><strong>Hittestress</strong><br>Hittestress in mei is gedaald met</p>
+            <div class="stat-green">17°C</div>
+          </div>
+          <div class="card">
+            <p><strong>Hittestress</strong><br>Hittestress in mei vóór de bewerking</p>
+            <div class="stat-red">35°C</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Activity -->
+    <aside class="team">
+      <h4>Activiteiten</h4>
+      <p class="log">🛠️ Ontwerp bijgewerkt<br><small>Zojuist</small></p>
+      <p class="log">➕ Ontwerp toegevoegd<br><small>12 uur geleden</small></p>
+      <p class="log">📁 Project aangemaakt<br><small>12 mei 2025, 11:56</small></p>
+
+      <h4>Teamleden</h4>
+      <ul>
+        <li>Natalie de Vries</li>
+        <li>Daan Jansen</li>
+        <li>Anke de Lange</li>
+        <li>Koen Okkerse</li>
+        <li>Karin Moerman</li>
+        <li>Merel Maas</li>
+        <li>Kees van Oorschot</li>
+      </ul>
+      <button class="btn small">Toevoegen +</button>
+    </aside>
+  </div>
+</body>
+</html>
