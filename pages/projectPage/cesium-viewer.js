@@ -10,6 +10,12 @@ const viewer = new Cesium.Viewer('cesiumContainer', {
 });
 viewer.scene.globe.depthTestAgainstTerrain = true;
 
+// 🌲 Bestaande bomen (extra 3D-tileset)
+const existingTrees = new Cesium.Cesium3DTileset({
+  url: 'https://www.3drotterdam.nl/datasource-data/b9294d5b-79e0-4744-ac88-b61e3e90d5bc/tileset.json'
+});
+viewer.scene.primitives.add(existingTrees);
+
 const buildings = new Cesium.Cesium3DTileset({
   url: 'https://www.3drotterdam.nl/datasource-data/d0c755ef-ba1b-43fc-bc44-24fc7bb152ce/tileset.json'
 });
